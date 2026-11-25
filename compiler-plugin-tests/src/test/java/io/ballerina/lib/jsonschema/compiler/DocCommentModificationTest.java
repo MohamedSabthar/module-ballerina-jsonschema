@@ -202,7 +202,8 @@ public class DocCommentModificationTest {
     private static String testSource(Module module, Collection<DocumentId> documentIds, String fileName) {
         for (DocumentId documentId : documentIds) {
             Document document = module.document(documentId);
-            if (Path.of(document.name()).getFileName().toString().equals(fileName)) {
+            String name = document.name().replace('\\', '/');
+            if (name.equals(fileName) || name.endsWith("/" + fileName)) {
                 return document.syntaxTree().toSourceCode();
             }
         }
