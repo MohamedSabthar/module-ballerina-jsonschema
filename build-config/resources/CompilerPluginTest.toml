@@ -1,0 +1,4 @@
+[package]
+org = "testorg"
+name = "plugin_tests"
+version = "@toml.version@"

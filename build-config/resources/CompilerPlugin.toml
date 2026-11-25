@@ -1,0 +1,6 @@
+[plugin]
+id = "jsonschema-compiler-plugin"
+class = "io.ballerina.lib.jsonschema.plugin.JsonSchemaCompilerPlugin"
+
+[[dependency]]
+path = "../compiler-plugin/build/libs/jsonschema-compiler-plugin-@project.version@.jar"

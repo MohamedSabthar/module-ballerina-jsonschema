@@ -1,0 +1,10 @@
+[package]
+org = "ballerina"
+name = "jsonschema_tests"
+version = "0.1.0"
+
+[[platform.java25.dependency]]
+groupId = "io.ballerina.lib"
+artifactId = "jsonschema-native"
+version = "0.1.0"
+path = "../native/build/libs/jsonschema-native-0.1.0-SNAPSHOT.jar"

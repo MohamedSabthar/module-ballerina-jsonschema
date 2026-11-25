@@ -1,0 +1,18 @@
+[package]
+distribution = "@ballerina.lang.version@"
+org = "ballerina"
+name = "jsonschema"
+version = "@toml.version@"
+license = ["Apache-2.0"]
+authors = ["Ballerina"]
+keywords = ["JSON Schema", "Types", "Schema", "Vendor/N/A", "Area/Data", "Type/Library"]
+repository = "https://github.com/MohamedSabthar/module-ballerina-jsonschema"
+
+[platform.java25]
+graalvmCompatible = true
+
+[[platform.java25.dependency]]
+groupId = "io.ballerina.lib"
+artifactId = "jsonschema-native"
+version = "@toml.version@"
+path = "../native/build/libs/jsonschema-native-@project.version@.jar"
