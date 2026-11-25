@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up JDK 25
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: 25
@@ -37,6 +37,10 @@ jobs:
           packageUser: ${{ github.actor }}
           packagePAT: ${{ secrets.GITHUB_TOKEN }}
         run: ./gradlew build --no-daemon
+
+      - name: Print Lint Reports
+        if: failure()
+        run: find . -path '*/build/reports/*' \( -name '*.txt' -o -name 'main.xml' -o -name 'test.xml' \) -print -exec cat {} \;
 
       - name: Generate CodeCov Report
         uses: codecov/codecov-action@v5

@@ -122,7 +122,8 @@ public class DocCommentModificationTest {
                 {"(2)", "int braced"}, {"MAX", "int constant"}, {"region", "string finalVariable"},
                 {"timeout", "int configurableVariable"}, {"RED", "Color enumMember"},
                 {"util:REMOTE_MAX", "int otherModuleConstant"}, {"util:remoteRegion", "string otherModuleFinal"},
-                {"[1, MAX, -2]", "int[] list"}, {"{a: 1, \"b\": region, c: [MAX, RED], timeout}", "map<anydata> mapping"},
+                {"[1, MAX, -2]", "int[] list"},
+                {"{a: 1, \"b\": region, c: [MAX, RED], timeout}", "map<anydata> mapping"},
                 {"4", "int trailingComment"}
         };
         for (String[] field : expected) {
@@ -134,8 +135,8 @@ public class DocCommentModificationTest {
         // An existing annotation is kept.
         Assert.assertTrue(source.contains("@js:Default {value: 99} int existingDefault = 5;"), source);
         // Description and default together.
-        Assert.assertTrue(source.contains(
-                "@js:Description {value: \"Documented and defaulted\"} @js:Default {value: 6 } int documented"), source);
+        Assert.assertTrue(source.contains("@js:Description {value: \"Documented and defaulted\"} "
+                + "@js:Default {value: 6 } int documented"), source);
         for (String unsafe : new String[]{"functionCall", "binary", "template", "unaryPlus", "negatedReference",
                 "listSpread", "mappingSpread", "computedKey", "typeCast", "unsafeMember",
                 "unsafeValue", "typeReference", "fromLocal"}) {
