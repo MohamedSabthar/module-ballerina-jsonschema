@@ -1,5 +1,7 @@
 # Ballerina JSON Schema Library
 
+[![Build](https://github.com/MohamedSabthar/module-ballerina-jsonschema/actions/workflows/build-timestamped-master.yml/badge.svg)](https://github.com/MohamedSabthar/module-ballerina-jsonschema/actions/workflows/build-timestamped-master.yml)
+[![codecov](https://codecov.io/gh/MohamedSabthar/module-ballerina-jsonschema/branch/main/graph/badge.svg)](https://codecov.io/gh/MohamedSabthar/module-ballerina-jsonschema)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/MohamedSabthar/module-ballerina-jsonschema.svg)](https://github.com/MohamedSabthar/module-ballerina-jsonschema/commits/main)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
